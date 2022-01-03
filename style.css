@@ -1,0 +1,116 @@
+/* custom CSS variables */
+:root{
+    /* fonts */
+    --font-family: 'Spartan',Arial, Helvetica, sans-serif;
+    --font-size:12px;
+    /* colors */
+    --dark-gray: hsl(0, 0%, 63%);
+    --very-dark-gray: hsl(0, 0%, 27%);
+    --black: hsl(0, 0%, 0%);
+    --white: hsl(0, 0%, 100%);
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+}
+img{
+    width: 100%;
+}
+.title,.text{
+    margin: 1em 0;
+}
+.text{
+    display: block;
+    line-height: 1.5;
+    color: var(--dark-gray);
+}
+/* navigation */
+.navigation{
+    /* padding: 2em; */
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    /* display: none; */
+    background-color: aqua;
+}
+nav {
+    padding: 2em;
+    width: 100%;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+}
+nav.active{
+    opacity: 1;
+    background-color: #fff;
+}
+.logo{
+    width: 50px;
+}
+.logo.active{
+    display: none;
+}
+.hamburger-icon,.close-icon{
+    position: absolute;
+    top: 2em;
+    left: 2em;
+    cursor: pointer;
+}
+.hamburger-icon.active{
+    display: none;
+}
+.close-icon{
+    display: none;
+}
+.close-icon.active{
+    display: block;
+}
+nav ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+nav ul li {
+    list-style: none;
+}
+nav ul li a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+/* main section */
+.text-content{
+    padding: 4em 2em;
+}
+.text-content .btn{
+    margin: 1em 1em 1em 0;
+    border-style: none;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    background-color: transparent;
+    cursor: pointer;
+    transition: .3s;
+}
+.text-content .btn:hover {
+    color: var(--dark-gray);
+}
+
+/* about secion */
+.about .text-content .title{
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+/* attributions */
+.attribution {
+    margin: 1em auto;
+    font-size: 11px;
+    text-align: center;
+  }
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+ }
